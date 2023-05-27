@@ -50,5 +50,7 @@ PRODUCT_PACKAGES += \
     DaxUI \
     daxService
 
+PRODUCT_PACKAGES += \
+    init.dolby.rc
 
 BOARD_VENDOR_SEPOLICY_DIRS += vendor/dolby/sepolicy/vendor
