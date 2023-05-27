@@ -44,3 +44,6 @@ PRODUCT_VENDOR_PROPERTIES += \
 PRODUCT_PACKAGES += \
     DaxUI \
     daxService
+
+
+BOARD_VENDOR_SEPOLICY_DIRS += vendor/dolby/sepolicy/vendor
