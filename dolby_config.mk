@@ -40,6 +40,13 @@ PRODUCT_COPY_FILES += \
 DEVICE_MANIFEST_FILE += vendor/dolby/vintf/dax_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/dolby/vintf/dax_framework_compatibility_matrix.xml
 
+# Configs
+PRODUCT_COPY_FILES += \
+    vendor/dolby/configs/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
+    vendor/dolby/configs/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml \
+    vendor/dolby/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    vendor/dolby/configs/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf
+
 PRODUCT_VENDOR_PROPERTIES += \
     vendor.audio.dolby.ds2.enabled=false
     vendor.audio.dolby.ds2.hardbypass=false
