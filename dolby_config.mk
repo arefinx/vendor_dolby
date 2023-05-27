@@ -32,6 +32,15 @@ PRODUCT_COPY_FILES += \
 DEVICE_MANIFEST_FILE += vendor/dolby/vintf/dax_manifest.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/dolby/vintf/dax_framework_compatibility_matrix.xml
 
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.audio.dolby.ds2.enabled=false
+    vendor.audio.dolby.ds2.hardbypass=false
+    ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1
+    ro.vendor.product.device.db=OP_DEVICE
+    ro.vendor.product.manufacturer.db=OP_PHONE
+    vendor.product.device=OP_PHONE
+    vendor.product.manufacturer=OPD
+
 PRODUCT_PACKAGES += \
     DaxUI \
     daxService
