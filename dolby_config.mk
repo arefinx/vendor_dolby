@@ -29,6 +29,9 @@ PRODUCT_COPY_FILES += \
     vendor/dolby/proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.dolby.hardware.dms@2.0-impl.so \
     vendor/dolby/proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.dolby.hardware.dms@2.0.so
 
+DEVICE_MANIFEST_FILE += vendor/dolby/vintf/dax_manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/dolby/vintf/dax_framework_compatibility_matrix.xml
+
 PRODUCT_PACKAGES += \
     DaxUI \
     daxService
