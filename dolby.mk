@@ -1,3 +1,9 @@
+#
+# Copyright (C) 2023 The Arefin's Laboratory
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
 PRODUCT_SOONG_NAMESPACES += \
     vendor/dolby
 
@@ -37,8 +43,8 @@ PRODUCT_COPY_FILES += \
     vendor/dolby/proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.dolby.hardware.dms@2.0-impl.so \
     vendor/dolby/proprietary/vendor/lib64/vendor.dolby.hardware.dms@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.dolby.hardware.dms@2.0.so
 
-DEVICE_MANIFEST_FILE += vendor/dolby/vintf/dax_manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/dolby/vintf/dax_framework_compatibility_matrix.xml
+DEVICE_MANIFEST_FILE += vendor/dolby/hidl/dax_manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += vendor/dolby/hidl/dax_framework_compatibility_matrix.xml
 
 # Configs
 PRODUCT_COPY_FILES += \
@@ -48,7 +54,8 @@ PRODUCT_COPY_FILES += \
     vendor/dolby/configs/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf
 
 PRODUCT_VENDOR_PROPERTIES += \
-    vendor.audio.dolby.ds2.enabled=false
+    ro.vendor.audio.dolby.dax.support=true
+    vendor.audio.dolby.ds2.enabled=true
     vendor.audio.dolby.ds2.hardbypass=false
     ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1
     ro.vendor.product.device.db=OP_DEVICE

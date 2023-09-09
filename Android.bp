@@ -1,3 +1,9 @@
+//
+// Copyright (C) 2023 Arefin's Laboratory
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
 soong_namespace {
 }
 
